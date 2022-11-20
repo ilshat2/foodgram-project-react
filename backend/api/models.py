@@ -119,3 +119,20 @@ class ShoppingList(models.Model):
         verbose_name_plural = 'Покупки'
 
 
+class Favorite(models.Model):
+    user = models.ForeignKey(
+        CustomUser, on_delete=models.CASCADE,
+        related_name="favorites", verbose_name='Пользователь')
+    recipe = models.ForeignKey(
+        Recipe, on_delete=models.CASCADE, related_name="favorite_recipes",
+        verbose_name='Рецепт')
+    when_added = models.DateTimeField(
+        auto_now_add=True, verbose_name='Дата добавления'
+    )
+
+    def __str__(self):
+        return f'{self.user} added {self.recipe}'
+
+    class Meta:
+        verbose_name = 'Избранное'
+        verbose_name_plural = 'Избранное'
