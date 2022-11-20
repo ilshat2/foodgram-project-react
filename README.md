@@ -45,7 +45,7 @@ https://docs.docker.com/engine/install/
 ```
 - клонировать репозиторий к себе на сервер командой:
 ```
-https://github.com/ilshat2/foodgram-project-react
+git clone https://github.com/ilshat2/foodgram-project-react
 ```
 - перейдити в каталок проекта:
 ```
