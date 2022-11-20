@@ -63,6 +63,24 @@ POSTGRES_PASSWORD=postgres # пароль для базы postgres
 DB_HOST=db #имя хоста базы данных 
 DB_PORT=5432 #порт
 ```
+- перейдити в каталог infra и запустите создание контейнеров:
+```
+docker-compose up -d --build
+```
+- первоначальная настройка проекта:
+```
+docker-compose exec backend python manage.py migrate --noinput
+```
+- создание суперпользователя:
+```
+docker-compose exec backend python manage.py collectstatic --no-input
+```
+- загрузка фикстур:
+```
+docker-compose exec backend python manage.py createsuperuser
+```
+После сборки, проект будет доступен по имени хоста вашей машины, на которой был развернут проект.
+
 
 Адрес: http://
 
