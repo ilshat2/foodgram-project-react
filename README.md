@@ -37,13 +37,6 @@ ilshat2
 - Данные сохраняются в volumes.
 - Код соответствует PEP8.
 
-## Для запуска проекта
-
-Адрес: http://84.252.129.10
-
-Тестовый суперпользователь:
-
-login: admin@mail.ru password: admin
 
 ## Для запуска проекта
 - необходимо установить Docker:
@@ -58,7 +51,24 @@ https://github.com/ilshat2/foodgram-project-react
 ```
 cd foodgram-project-react
 ```
+- создайть файл окружений
+```
+touch.env
+```
+- и заполнить его:
+```
+DB_NAME=postgres # имя базы postgres
+POSTGRES_USER=postgres # имя пользователя postgres 
+POSTGRES_PASSWORD=postgres # пароль для базы postgres 
+DB_HOST=db #имя хоста базы данных 
+DB_PORT=5432 #порт
+```
 
+Адрес: http://
+
+Тестовый суперпользователь:
+
+login: admin@mail.ru password: admin
 
 ## Автор проекта
 _Ильшат Кушманбетов_, [тут](https://spb.hh.ru/resume/35294e4eff0b572abb0039ed1f6c586556346c) можно посмотреть мое резюме.
