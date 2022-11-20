@@ -202,4 +202,3 @@ class DownloadShoppingCart(APIView):
         response = HttpResponse(wishlist, 'Content-Type: text/plain')
         response['Content-Disposition'] = 'attachment; filename="wishlist.txt"'
         return response
-
