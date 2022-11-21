@@ -296,7 +296,6 @@ class CreateRecipeSerializer(serializers.ModelSerializer):
                   'name', 'image', 'text', 'cooking_time')
 
     def create_ingredients(self, recipe, ingredients_data):
-        print(ingredients_data)
         IngredientInRecipe.objects.bulk_create([
             IngredientInRecipe(
                 ingredient=Ingredient.objects.get(id=ingredient['id']),
@@ -332,8 +331,6 @@ class CreateRecipeSerializer(serializers.ModelSerializer):
         return instance
 
     def validate(self, data):
-        print(self.initial_data)
-        print(data)
         ingredients = self.initial_data.get('ingredients')
         for ingredient_item in ingredients:
             if int(ingredient_item['amount']) <= 0:
