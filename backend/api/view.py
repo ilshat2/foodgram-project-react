@@ -92,9 +92,14 @@ class FollowView(APIView):
     def delete(self, request, author_id):
         user = request.user
         author = get_object_or_404(CustomUser, id=author_id)
-        obj = get_object_or_404(Follow, user=user, author=author)
+        #obj = get_object_or_404(Follow, user=user, author=author)
+        #obj.delete()
+        obj = Follow.objects.filter(user=user, author=author)
+        if not obj.exists():
+            return Response(
+                status=status.HTTP_400_BAD_REQUEST
+            )
         obj.delete()
-
         return Response(
             status=status.HTTP_204_NO_CONTENT
         )
@@ -129,9 +134,14 @@ class FavouriteView(APIView):
     def delete(self, request, recipe_id):
         user = request.user
         recipe = get_object_or_404(Recipe, id=recipe_id)
-        obj = get_object_or_404(Favorite, user=user, recipe=recipe)
+        #obj = get_object_or_404(Favorite, user=user, recipe=recipe)
+        #obj.delete()
+        obj = Favorite.objects.filter(user=user, recipe=recipe)
+        if not obj.exists():
+            return Response(
+                status=status.HTTP_400_BAD_REQUEST
+            )
         obj.delete()
-
         return Response(
             status=status.HTTP_204_NO_CONTENT
         )
@@ -162,9 +172,14 @@ class ShoppingListView(APIView):
     def delete(self, request, recipe_id):
         user = request.user
         recipe = get_object_or_404(Recipe, id=recipe_id)
-        obj = get_object_or_404(ShoppingList, user=user, recipe=recipe)
+        #obj = get_object_or_404(ShoppingList, user=user, recipe=recipe)
+        #obj.delete()
+        obj = ShoppingList.objects.filter(user=user, recipe=recipe)
+        if not obj.exists():
+            return Response(
+                status=status.HTTP_400_BAD_REQUEST
+            )
         obj.delete()
-
         return Response(
             status=status.HTTP_204_NO_CONTENT
         )
