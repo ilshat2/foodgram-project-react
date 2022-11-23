@@ -89,4 +89,4 @@ docker-compose exec backend python manage.py createsuperuser
 login: admin@mail.ru password: admin
 
 ## Автор проекта
-_Ильшат Кушманбетов_, [тут](https://spb.hh.ru/resume/35294e4eff0b572abb0039ed1f6c586556346c) можно посмотреть мое резюме.
+_Ильшат Кушманбетов_, [резюме](https://spb.hh.ru/resume/35294e4eff0b572abb0039ed1f6c586556346c)
