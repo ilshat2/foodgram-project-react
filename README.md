@@ -53,7 +53,7 @@ cd foodgram-project-react
 ```
 - создайть файл окружений
 ```
-touch.env
+touch .env
 ```
 - и заполнить его:
 ```
