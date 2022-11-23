@@ -15,7 +15,7 @@ services:
       - POSTGRES_DB
 
   backend:
-    image: dansen95/foodgram:latest
+    image: ilshat2/foodgram:latest
     restart: always
     depends_on:
       - db
@@ -26,7 +26,7 @@ services:
       - ./.env
 
   frontend:
-    image: dansen95/foodgram-frontend:latest
+    image: ilshat2/foodgram-frontend:latest
     volumes:
       - ../frontend/:/app/result_build/
     depends_on:
@@ -49,7 +49,7 @@ services:
       - backend
       - frontend
     environment:
-      - SERVER_NAME=127.0.0.1 localhost 84.252.129.10
+      - SERVER_NAME=127.0.0.1 localhost 158.160.18.172
 
 volumes:
   postgres_data:
