@@ -43,7 +43,7 @@ jobs:
           push: true
           context: ./backend/
           file: ./backend/Dockerfile
-          tags: dansen95/foodgram:latest
+          tags: ilshat2/foodgram:latest
 
   deploy:
     runs-on: ubuntu-latest
