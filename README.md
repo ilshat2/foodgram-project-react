@@ -82,11 +82,11 @@ docker-compose exec backend python manage.py createsuperuser
 После сборки, проект будет доступен по имени хоста вашей машины, на которой был развернут проект.
 
 
-Адрес: http://158.160.6.199/
+Адрес: http://51.250.19.253/
 
-Тестовый суперпользователь:
+Тестовый пользователь:
 
-login: admin@mail.ru password: admin
+login: courier@newvegas.com password: 1234
 
 ## Автор проекта
 _Ильшат Кушманбетов_, [резюме](https://spb.hh.ru/resume/35294e4eff0b572abb0039ed1f6c586556346c)
